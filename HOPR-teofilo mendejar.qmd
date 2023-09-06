@@ -1,0 +1,54 @@
+---
+title: "Hands on Programing with r activity in sec math 17"
+author: "Teofilo Mendejar"
+format: html
+editor: visual
+---
+
+## CHAPTER 1 The Very Basic
+
+```{r}
+1+1
+```
+
+```{r}
+100:130
+```
+
+```{r}
+2*5
+```
+
+```{r}
+33*45
+```
+
+```{r}
+a<-1
+```
+
+```{r}
+a+2
+```
+
+## Creating a Die
+
+```{r}
+die <-1:6
+```
+
+```{r}
+ls()
+```
+
+```{r}
+die -1
+```
+
+```{r}
+die/3
+```
+
+```{r}
+die*die
+```
