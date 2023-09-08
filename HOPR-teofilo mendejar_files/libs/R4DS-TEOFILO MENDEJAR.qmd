@@ -1,0 +1,23 @@
+---
+title: "R For Data Science(2e): Activity in Sec Math 17"
+author: "Teofilo Mendejar"
+format: html
+editor: visual
+---
+
+# Introduction
+
+## What Will You Learn?
+
+Reviewe the pipeline because sir will make it a part of the exam
+
+![this is the pipeline](R%20PIC.jpg.png)
+
+## The Tidyverse
+
+To install the tidyverse package use the code:`install.packages("tidyverse")`.
+
+```{r}
+#loading the tidyverse package
+library(tidyverse)
+```
