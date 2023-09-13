@@ -18,12 +18,56 @@ Reviewe the pipeline because sir will make it a part of the exam
 To install the tidyverse package use the code:`install.packages("tidyverse")`.
 
 ```{r}
-#loading the tidyverse package
+#|label: load-package
 library(tidyverse)
 ```
 
 #### We installed other packages
 
-install.packages(
+`install.packages(c("arrow", "babynames", "curl", "duckdb", "gapminder","ggrepel", "ggridges", "ggthemes", "hexbin", "janitor", "Lahman","leaflet", "maps","nycflights13", "openxlsx", "palmerpenguins", "repurrrsive", "tidymodels", "writexl"))`
 
-c("arrow", "babynames", "curl", "duckdb", "gapminder","ggrepel", "ggridges", "ggthemes", "hexbin", "janitor", "Lahman","leaflet", "maps","nycflights13", "openxlsx", "palmerpenguins", "repurrrsive", "tidymodels", "writexl"))
+# Data Visualization
+
+::: callout-note
+## Reminder
+
+First load the tidyverse package
+:::
+
+```{r}
+#|label: load-packages
+
+library(palmerpenguins)
+library(ggthemes)
+```
+
+## First steps
+
+```{r}
+penguins
+```
+
+```{r}
+glimpse(penguins)
+```
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+
+ggplot(
+  data = penguins,
+   mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point(aes(color = species, shape = species)) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Body mass and flipper length",
+    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+    x = "Flipper length (mm)", y = "Body mass (g)",
+    color = "Species", shape = "Species"
+  ) +
+  scale_color_colorblind()
+#> Warning: Removed 2 rows containing missing values (`geom_point
+```
